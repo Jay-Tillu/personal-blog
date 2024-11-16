@@ -88,6 +88,19 @@ const config = {
 	async redirects() {
 		return await getRedirectionRules();
 	},
+
+	async rewrites() {
+		return [
+			{
+				source: "/blogs",
+				destination: "personal-blog-al30sgbf4-jay-tillus-projects.vercel.app/blogs",
+			},
+			{
+				source: "/blogs/:path*",
+				destination: "personal-blog-al30sgbf4-jay-tillus-projects.vercel.app/blogs/:path*",
+			},
+		];
+	},
 };
 
 module.exports = config;

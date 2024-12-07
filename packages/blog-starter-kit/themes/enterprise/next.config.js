@@ -59,7 +59,7 @@ const getRedirectionRules = async () => {
  * @type {import('next').NextConfig}
  */
 const config = {
-	transpilePackages: ['@starter-kit/utils'],
+	transpilePackages: ['@starter-kit/utils', 'geist'],
 	basePath: getBasePath(),
 	experimental: {
 		scrollRestoration: true,

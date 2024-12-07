@@ -35,18 +35,18 @@ export const PostHeader = ({ title, coverImage, date, author, readTimeInMinutes 
 	return (
 		<>
 			<PostTitle>{title}</PostTitle>
-			<div className="flex flex-row flex-wrap items-center justify-center w-full gap-2 px-2 text-slate-700 dark:text-neutral-300 md:px-0">
+			<div className="flex flex-row flex-wrap items-center justify-center w-full gap-2 px-2 text-neutral-300 md:px-0">
 				<div className="mb-5 flex w-full flex-row items-center justify-center md:mb-0 md:w-auto md:justify-start">
 					{authorsArray.map((coAuthor, index) => (
 						<div
 						key={coAuthor.id?.toString()}
 						style={{ zIndex: index + 1 }}
 						className={twJoin(
-							'overflow-hidden rounded-full  bg-slate-200  dark:bg-white/20 md:mr-3',
+							'overflow-hidden rounded-full  bg-white/20 md:mr-3',
 							index > 0 ? 'hidden md:block' : '',
 							authorsArray.length === 1
 							? 'h-10 w-10 md:h-12 md:w-12'
-							: 'h-8 w-8 border-2 border-slate-100 dark:border-slate-800 md:h-9 md:w-9 [&:not(:first-of-type)]:-ml-3 md:[&:not(:first-of-type)]:-ml-6 ',
+							: 'h-8 w-8 border-2 border-slate-800 md:h-9 md:w-9 [&:not(:first-of-type)]:-ml-3 md:[&:not(:first-of-type)]:-ml-6 ',
 						)}
 						>
 						<ProfileImage user={coAuthor} width="200" height="200" hoverDisabled={true} />
@@ -64,7 +64,7 @@ export const PostHeader = ({ title, coverImage, date, author, readTimeInMinutes 
 					{!post.coAuthors?.length && (
 						<a
 						href={`https://hashnode.com/@${post.author.username}`}
-						className="ml-2 font-semibold text-slate-600 dark:text-white md:ml-0"
+						className="ml-2 font-semibold text-white md:ml-0"
 						>
 						<span>{post.author.name}</span>
 						</a>
@@ -72,7 +72,7 @@ export const PostHeader = ({ title, coverImage, date, author, readTimeInMinutes 
 					{post.coAuthors && post.coAuthors.length > 0 && (
 						<button
 						onClick={openCoAuthorModal}
-						className="ml-2 text-left font-semibold text-slate-600 hover:underline dark:text-white"
+						className="ml-2 text-left font-semibold text-white hover:underline"
 						>
 						<span>{post.author.name}</span>
 						{post.coAuthors && (

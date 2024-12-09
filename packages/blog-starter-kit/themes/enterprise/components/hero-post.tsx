@@ -27,10 +27,7 @@ export const HeroPost = ({ title, coverImage, date, excerpt, slug }: Props) => {
 			</div>
 			<div className="col-span-1 flex flex-col gap-2">
 				<h1 className="text-xl font-bold leading-snug text-neutral-50 lg:text-3xl">
-					<Link
-						href={postURL}
-						className="hover:text-primary-500 leading-tight tracking-tight"
-					>
+					<Link href={postURL} className="leading-tight tracking-tight hover:text-sky-500">
 						{title}
 					</Link>
 				</h1>

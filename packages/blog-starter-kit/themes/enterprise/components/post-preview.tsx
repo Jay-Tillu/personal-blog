@@ -32,7 +32,7 @@ export const PostPreview = ({ title, coverImage, date, excerpt, slug }: Props) =
 				<h1 className="text-lg font-semibold leading-tight text-neutral-50">
 					<Link
 						href={postURL}
-						className="hover:text-primary-500 hover:underline"
+						className="hover:text-sky-500 hover:underline"
 					>
 						{title}
 					</Link>

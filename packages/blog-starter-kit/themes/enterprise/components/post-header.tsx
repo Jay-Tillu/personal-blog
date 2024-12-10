@@ -55,7 +55,7 @@ export const PostHeader = ({ title, coverImage, date, author, readTimeInMinutes 
 						<button
 							onClick={openCoAuthorModal}
 							style={{ zIndex: post.coAuthors?.length }}
-							className="border-1-1/2 relative -ml-3 flex h-8 w-8 items-center justify-center overflow-hidden rounded-full border-slate-800 bg-slate-600 px-1 text-white group-hover:border-slate-200 group-hover:dark:border-slate-700 md:hidden"
+							className="border-1-1/2 relative -ml-3 flex h-8 w-8 items-center justify-center overflow-hidden rounded-full border-slate-800 bg-slate-600 px-1 text-white  group-hover:border-slate-700 md:hidden"
 						>
 							<p className="truncate text-xs font-normal">+{post.coAuthors.length}</p>
 						</button>

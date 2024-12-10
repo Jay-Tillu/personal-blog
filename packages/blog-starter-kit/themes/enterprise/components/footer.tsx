@@ -7,7 +7,7 @@ export const Footer = () => {
 	const { publication } = useAppContext();
 	const PUBLICATION_LOGO = publication.preferences.logo;
 	return (
-		<footer className="border-t py-5 dark:border-neutral-800 ">
+		<footer className="border-t py-5 border-neutral-800 ">
 			<Container className="px-5">
 				{PUBLICATION_LOGO ? (
 					<div className="mb-20 flex w-full flex-row justify-center">
@@ -20,12 +20,12 @@ export const Footer = () => {
 						</Link>
 					</div>
 				) : (
-					<p className="mb-5 text-center text-xl font-semibold text-slate-900 dark:text-slate-50 md:text-4xl">
+					<p className="mb-5 text-center text-xl font-semibold text-slate-50 md:text-4xl">
 						{publication.title}
 					</p>
 				)}
 				<div className="grid w-full items-center">
-					<div className="col-span-2 mb-5 flex flex-row items-center justify-center gap-5 text-right text-slate-600 dark:text-neutral-300 md:text-center">
+					<div className="col-span-2 mb-5 flex flex-row items-center justify-center gap-5 text-right text-neutral-300 md:text-center">
 						<p>&copy; 2024 Jay Tillu</p>
 						{/* <p>
 							<a href="#" className="hover:underline">

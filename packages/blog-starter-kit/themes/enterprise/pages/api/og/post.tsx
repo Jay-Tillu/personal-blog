@@ -48,7 +48,7 @@ export default async function handler(req: NextRequest) {
 	const photo = ogData.photo ? resizeImage(ogData.photo, {}) : DEFAULT_AVATAR;
 	const title = decodeURIComponent(encodedTitle);
 
-	let bannerBackground = isDefaultModeDark ? '#0f172a' : '#f3f4f6';
+	let bannerBackground = '#0f172a';
 	let titleTailwindClass;
 
 	if (bgcolor) {
@@ -74,11 +74,7 @@ export default async function handler(req: NextRequest) {
 			>
 				{/* if blog is set to open in dark mode, then change text-slate-900 to text-white and change bg-white to bg-black */}
 				<div
-					tw={`relative flex flex-col items-center p-10 ${
-						isDefaultModeDark ? 'bg-black' : 'bg-white'
-					} ${
-						isDefaultModeDark ? 'text-white' : 'text-slate-900'
-					} h-full w-full rounded-xl shadow-md`}
+					tw={`relative flex flex-col items-center p-10 ${'bg-black'} ${'text-white'} h-full w-full rounded-xl shadow-md`}
 				>
 					<div tw="absolute -top-px -left-px -right-px -bottom-px rounded-xl border-2 border-black/5" />
 					<div tw="flex w-full flex-row items-center">

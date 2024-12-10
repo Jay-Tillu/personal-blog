@@ -38,10 +38,7 @@ const Toc = ({
 		<ul className="mt-5 flex flex-col gap-5 pl-5 font-medium text-neutral-200">
 			{children.map((item) => (
 				<li key={item.id}>
-					<a
-						href={`#heading-${item.slug}`}
-						className="hover:text-sky-500 underline hover:bg-neutral-800"
-					>
+					<a href={`#heading-${item.slug}`} className="hover:text-sky-500 ">
 						{item.title}
 					</a>
 
